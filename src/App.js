@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Box, Heading, Button, Flex, Stack } from "@chakra-ui/react";
+import bgImage from "./imagen/cicla.jpg";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Box
+      h="40vh"
+      bg="gray"
+      bgImage={`url(${bgImage})`}
+      bgRepeat="no-repeat"
+      bgSize="cover"
+    >
+      <Flex
+        direction="column"
+        alignItems="center"
+        justify="center"
+        h="100%"
+        bg="rgb(0 0 0 /50%)"
+        p={["0 10%", null, "0 20%"]}
+      >
+        <Heading variant="banner">Domina El Terreno</Heading>
+        <Stack
+          direction={{ base: "column", md: "row" }}
+          spacing="40px"
+          mt="30px"
+          w={["100%", null, "auto"]}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Button variant="outline" size="lg">
+            Ver detalles
+          </Button>
+          <Button variant="outline" size="lg">
+            Ver video
+          </Button>
+        </Stack>
+      </Flex>
+    </Box>
   );
 }
-
 export default App;
